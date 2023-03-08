@@ -1,0 +1,110 @@
+{% extends 'anima_app/base.html' %}
+{% block title %}Anima MedTours - Contact Us{% endblock %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="contacting justify-content-center bg-med">
+    <div class="container px-4 py-5">
+        <div class="screen">
+            <div class="screen-header">
+                <div class="screen-header-left">
+                    <h4 class="text-light fw-bold text-center">Anima MedTours</h4>
+                </div>
+                <div class="screen-header-right">
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                </div>
+            </div>
+            <div class="screen-body">
+                <div class="screen-body-item left">
+                    <div class="app-title">
+                        <span>Start Your</span>
+                        <span class="text-light">Journey</span>
+
+                    </div>
+                    <span uk-scrollspy="cls: uk-animation-slide-bottom; target: .img-fluid; delay: 300; repeat: true"
+                        class="mt-4"><img src="{% static 'img/logo_white.png' %}" class="img-fluid" alt="logo"
+                            width="200" uk-scrollspy-class="uk-animation-slide-bottom"></span>
+                </div>
+                <div class="screen-body-item">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="app-form">
+                            <div class="app-form-group">
+                                {{ form.name|as_crispy_field }}
+                            </div>
+                            <div class="app-form-group">
+                                {{ form.email|as_crispy_field }}
+                            </div>
+                            <div class="app-form-group">
+                                {{ form.phone|as_crispy_field }}
+                            </div>
+                            <div class="app-form-group message">
+                                {{ form.subject|as_crispy_field }}
+                            </div>
+                            <div class="app-form-group message">
+                                {{ form.message|as_crispy_field }}
+                            </div>
+                            <div class="app-form-group buttons">
+                                <button class="app-form-button" type="submit">
+                                    <div class="svg-wrapper">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path
+                                                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </div>
+                                    <span>Send</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Find us Section -->
+<section class="finds bg-light">
+    <div class="container">
+        <div class="row text-center justify-content-between">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <i class='bx bxs-map bx-tada bx-rotate-90 bx-lg text-cool'></i>
+                <h3 class="fw-bold mt-2 text-yell">VISIT US</h3>
+                <p class="fw-bold text-dark">
+                    <span>Madonna House, 3rd Floor, Suite 315</span>
+                    <span><br></span>
+                    <span>Westlands Rd, Westlands</span>
+                </p>
+            </div>
+            <!-- Call Us Section -->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <i class='bx bxs-phone bx-tada bx-rotate-90 bx-lg text-cool'></i>
+                <h3 class="fw-bold mt-2 text-yell">CALL US</h3>
+                <p class="fw-bold text-dark">
+                    <span>+254 704 208484</span>
+                    <span><br></span>
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <i class='bx bxs-chat bx-lg text-cool'></i>
+                <h3 class="fw-bold mt-2 text-yell">MAIL US</h3>
+                <p class="fw-bold text-dark">
+                    <span>anima.medtours@gmail.com</span>
+                    <span><br></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- This section contains the map -->
+<section class="mappy p-0">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.707317055939!2d36.80441117319883!3d-1.26547004094992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173fc261c85d%3A0xc5db81b7b61f20ae!2sMadonna%20House!5e0!3m2!1sen!2ske!4v1678050927342!5m2!1sen!2ske"
+        width="1920" height="540" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+{% endblock content %}

@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.11/dist/css/uikit.min.css" />
+
+    <link rel="shortcut icon" href="{% static 'img/logo_white.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'img/logo_white.png' %}">
+
+    <link rel="stylesheet" href="{% static 'css/official_styling.css' %}">
+    <link rel="stylesheet" href="{% static 'css/btn-who.css' %}">
+    <link rel="stylesheet" href="{% static 'css/btn-contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media_queries.css' %}">
+    <!-- Meta Data -->
+    <meta name="description" property="og:description"
+        content="{% block meta_description %}At Anima MedTours (AMT), we help patients experience top-quality healthcare in India. We support our patients in their journey to access medical treatment, procedures or routine medical check-ups in India.{% endblock %}" />
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="Anima MedTours" />
+    <!-- website name -->
+    <meta property="og:title" content="Anima MedTours - TRAVEL. HEAL. THRIVE" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description"
+        content="At Anima MedTours (AMT), we help patients experience top-quality healthcare in India. We support our patients in their journey to access medical treatment, procedures or routine medical check-ups in India." />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="{% static '/img/logo_all.png' %}" />
+    <!-- image link, make sure it's jpg -->
+    <title>{% block title %}Anima MedTours - TRAVEL. HEAL. THRIVE{% endblock %}</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="{% static 'img/logo_all.png' %}" class="img-fluid" alt="logo" width="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa fa-bars text-success"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a href="{% url 'anima_app:home' %}" class="nav-link text-decoration-none">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" href="{% url 'anima_app:about' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" href="{% url 'anima_app:services' %}">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" href="{% url 'anima_app:contact' %}">Contact Us</a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-dark"><a href="{% url 'anima_app:contact' %}"
+                        class="text-light text-decoration-none"><i class='bx bxs-phone-call bx-tada'></i>
+                        Start your journey</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main section begins here -->
+
+
+    {% block content %}
+    {% endblock content %}
+
+    <!-- Main section ends here -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>Madonna House, 3rd Floor, Suite 315, Westlands Rd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class='bx bxs-phone'></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>+254704 208484</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class='bx bxs-envelope'></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>anima.medtours@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="{% url 'anima_app:home' %}"><img src="{% static 'img/anima_logo.png' %}"
+                                        class="img-fluid" alt="logo" width="80"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>AMT assist patients seeking medical treatment, procedures, or check-ups in India. We
+                                    offer advice on the process, provide accurate treatment quotes, and ensure a smooth
+                                    experience throughout the treatment and recovery process.
+                                </p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-square linkedin-bg"></i></a>
+                                <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="{% url 'anima_app:home' %}">Home</a></li>
+                                <li><a href="{% url 'anima_app:about' %}">About Us</a></li>
+                                <li><a href="{% url 'anima_app:services' %}">Our Services</a></li>
+                                <li><a href="{% url 'anima_app:contact' %}">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Office Address</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>
+                                    <span class="text-light">P.O BOX 8066-00100</span>
+                                    <br>
+                                    <span class="text-light">Nairobi Kenya</span>
+                                    <br>
+                                    <br>
+                                    <span class="text-light">Madonna House, 3rd Floor, Suite 315</span>
+                                    <br>
+                                    <span class="text-light">Westlands Rd, Westlands</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p class="text-light">Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All Rights Reserved <a href="#" class="text-decoration-none">Anima MedTours</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="{% url 'anima_app:home' %}"
+                                        class="text-light text-decoration-none">Home</a></li>
+                                <li><a href="{% url 'anima_app:about' %}" class="text-light text-decoration-none">About
+                                        Us</a>
+                                </li>
+                                <li><a href="{% url 'anima_app:services' %}" class="text-light text-decoration-none">Our
+                                        Services</a>
+                                </li>
+                                <li><a href="{% url 'anima_app:contact' %}"
+                                        class="text-light text-decoration-none">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- //////////////////////////////////////////////////////////////////////// -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.11/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.11/dist/js/uikit-icons.min.js"></script>
+
+
+
+</body>
+
+</html>

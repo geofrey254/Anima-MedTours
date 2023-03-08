@@ -1,0 +1,14 @@
+{% extends 'anima_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="success sextion-padding-100-70">
+    <div class="container">
+        <div class="mx-auto text-center p-5">
+            <h1 class="fw-bolder text-warning">Message Sent Successfully</h1>
+            <img src="{% static 'img/sent.png' %}" class=" img-fluid" alt="MedTour Image" loading="lazy"
+                    style="width: 400px;">
+        </div>
+    </div>
+</section>
+{% endblock content %}
