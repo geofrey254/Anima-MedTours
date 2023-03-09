@@ -2,23 +2,20 @@
 {% block title %}Anima MedTours - TRAVEL. HEAL. THRIVE{% endblock %}
 {% load static %}
 {% block content %}
-<section class="bg-top section-padding-100-70">
+<section class="bg-top section-padding-100-0">
   <div class="container pt-5">
+    <div class="shape"></div>
+    <div class="shape_two"></div>
     <div class="row" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
       <!-- Tag line and welcome message -->
-      <div class="col-lg-7 col-md-12 col-sm-12 tag-line" uk-scrollspy-class="uk-animation-slide-top">
+      <div class="col-lg-9 col-md-12 col-sm-12 tag-line" uk-scrollspy-class="uk-animation-slide-top">
         <h2>Experience <br> <span class="top-line">Top-Quality</span><br>Healthcare<br><span
             class="abroad">Abroad</span></h2>
-        <p class="text-light">Anima MedTour offers affordable and high-quality medical care through a wide range of
-          services including consultation, scheduling, travel arrangements, accommodation, and follow-up care. We work
-          with top-tier medical professionals to prioritize their patients' safety, comfort, and stress-free experience.
-          Personalized solutions are provided to meet the unique needs of each patient and we are committed to being
-          with them every step of the way.</p>
         <a href="{% url 'anima_app:about' %}" class="btn-who text-decoration-none text-light">Who we are</a>
       </div>
       <!-- Suitcase image -->
-      <div class="col-lg-5 col-md-12 col-sm-12 logo_white pt-4" uk-scrollspy-class="uk-animation-slide-bottom">
-        <img src="{% static 'img/trav.png' %}">
+      <div class="col-lg-3 col-md-12 col-sm-12 flower-png">         
+        <img src="{% static 'img/flower.png' %}" alt="">       
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserr`at:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
   margin: 0;
@@ -191,37 +192,71 @@ section {
 .bg-top {
   width: 100%;
   height: 100vh;
-  background: #1f7fa9;
+  background: url(/static/img/doc.jpg), linear-gradient(to right, #1f7fa9, rgba(73, 66, 66, 0.961)) center no-repeat;
   background-position: center;
   background-blend-mode: multiply;
   background-size: cover;
-  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-items: center;
+  position: relative;
 }
 
+.bg-top .shape {
+  position: absolute;
+  top: 0%;
+  /* set the top position to the desired value */
+  right: 9%;
+  /* align the shape to the left */
+  width: 50%;
+  /* set the width to 100% to fill the container */
+  height: 100px;
+  /* set the height to the desired value */
+  background-color: #ffcc2f;
+  /* set the background color to the desired value */
+  opacity: 1;
+  /* set the opacity to the desired value */
+  transform: rotate(45deg);
+}
+
+.bg-top .shape_two {
+  position: absolute;
+  top: 0%;
+  /* set the top position to the desired value */
+  right: 20%;
+  /* align the shape to the left */
+  width: 50%;
+  /* set the width to 100% to fill the container */
+  height: 100px;
+  /* set the height to the desired value */
+  opacity: 1;
+  /* set the opacity to the desired value */
+  transform: rotate(45deg);
+  border: 2px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+
 .bg-top .tag-line h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
   color: white;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 .bg-top .tag-line .top-line {
-  font-size: 4.5rem;
-  text-shadow: 5px 5px #ffcc2f;
+  font-size: 12rem;
+  text-shadow: 2px 1px 8px rgba(0, 0, 0, 0.8);
 }
 
-.bg-top .logo_white img {
+.bg-top .flower-png img {
   width: 100%;
+  position: relative;
+  top: 200px;
 }
 
-.bg-top .logo_white .comp {
-  font-family: 'Poppins', sans-serif;
-  font-size: 5em;
-  text-transform: uppercase;
-}
 
 /* FOOTER STYLING */
 .footer-section {
@@ -554,13 +589,13 @@ section {
 }
 
 /* Socials */
-.socials{
+.socials {
   background: #1f7fa9;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #bababa48, #1f7fa9);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #bababa48, #1f7fa9);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #bababa48, #1f7fa9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #bababa48, #1f7fa9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* About-Us Page */
@@ -629,12 +664,16 @@ section {
 }
 
 /* Activities */
-.activities{
-  background: #4AC29A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom,#fff, #1f7fa9);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom,#fff, #1f7fa9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.activities {
+  background: #4AC29A;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #fff, #1f7fa9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #fff, #1f7fa9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
 .activities .activities-text .activities-head {
   font-family: 'Montserrat', sans-serif;
   position: relative;
@@ -661,7 +700,7 @@ background: linear-gradient(to bottom,#fff, #1f7fa9); /* W3C, IE 10+/ Edge, Fire
 
 /* Our Services Page */
 /* ###########################################3 */
-.bg-med{
+.bg-med {
   background: #1f7fa9;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #ffcc2f, #1f7fa9);
@@ -747,14 +786,15 @@ background: linear-gradient(to bottom,#fff, #1f7fa9); /* W3C, IE 10+/ Edge, Fire
   -moz-box-shadow: 10px 10px 46px -13px rgba(0, 0, 0, 0.79);
 }
 
-.serv-list .container .row .card .card-body .card-text{
+.serv-list .container .row .card .card-body .card-text {
   color: #1f7fa9;
   font-family: 'Khand', sans-serif;
   font-weight: 700;
 }
+
 @media (max-width: 575.98px) {
   .services .serv-how {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 }
 
@@ -849,7 +889,7 @@ background: linear-gradient(to bottom,#fff, #1f7fa9); /* W3C, IE 10+/ Edge, Fire
   margin-top: 40px;
 }
 
-.app-form-group .form-label{
+.app-form-group .form-label {
   display: none;
 }
 
@@ -931,48 +971,48 @@ background: linear-gradient(to bottom,#fff, #1f7fa9); /* W3C, IE 10+/ Edge, Fire
 
 @keyframes fly-1 {
   from {
-      transform: translateY(0.1em);
+    transform: translateY(0.1em);
   }
 
   to {
-      transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
   }
 }
 
 @media screen and (max-width: 520px) {
   .screen-body {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .screen-body img {
-      width: 100px;
-      display: block;
-      margin: auto;
+    width: 100px;
+    display: block;
+    margin: auto;
   }
 
   .screen-body-item.left {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   .app-title {
-      flex-direction: row;
+    flex-direction: row;
   }
 
   .app-title span {
-      margin-right: 12px;
+    margin-right: 12px;
   }
 
   .app-title:after {
-      display: none;
+    display: none;
   }
 }
 
 @media screen and (max-width: 600px) {
   .screen-body {
-      padding: 40px;
+    padding: 40px;
   }
 
   .screen-body-item {
-      padding: 0;
+    padding: 0;
   }
 }
