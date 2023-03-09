@@ -473,9 +473,6 @@ section {
   font-weight: 900;
   font-size: 3rem;
   color: #1f7fa9;
-  text-decoration: underline;
-  text-decoration-style: double;
-  text-decoration-thickness: 6px;
 }
 
 .features .feat-head .feat-heal {
