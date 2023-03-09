@@ -25,12 +25,12 @@
   }
 
   .bg-top .tag-line h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-top: 150px;
   }
 
   .bg-top .tag-line .top-line {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
 
   .bg-top .tag-line .abroad {
@@ -42,8 +42,6 @@
     position: relative;
     top: 1px;
     left: 40%;
-    margin-bottom: 0;
-    padding-bottom: 0;
   }
 
   .features .feat-head {
