@@ -18,8 +18,10 @@
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.11/dist/css/uikit.min.css" />
 
-    <link rel="shortcut icon" href="{% static 'img/logo_white.png' %}" type="image/x-icon">
-    <link rel="icon" href="{% static 'img/logo_white.png' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo_blue.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'img/logo_blue.png' %}">
+
+    <link rel="canonical" href="https://www.animamedtours.com">
 
     <link rel="stylesheet" href="{% static 'css/anima_medtour_styling.css' %}">
     <link rel="stylesheet" href="{% static 'css/btn-who.css' %}">
@@ -57,8 +59,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img src="{% static 'img/logo_all.png' %}" class="img-fluid" alt="logo" width="80">
+            <a href="{% url 'anima_app:home' %}" class="navbar-brand">
+                <img src="{% static 'img/logo_all.png' %}" class="img-fluid" alt="Anima MedTours Logo" width="80">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,7 +134,7 @@
                         <div class="footer-widget">
                             <div class="footer-logo">
                                 <a href="{% url 'anima_app:home' %}"><img src="{% static 'img/anima_logo.png' %}"
-                                        class="img-fluid" alt="logo" width="80"></a>
+                                        class="img-fluid" alt="Anima MedTours Logo" width="80"></a>
                             </div>
                             <div class="footer-text">
                                 <p>AMT assist patients seeking medical treatment, procedures, or check-ups in India. We
